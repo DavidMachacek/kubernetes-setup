@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: janesapps
+  namespace: david
+spec:
+  rules:
+  - host: janesapps.mycluster.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: janesapps
+          servicePort: 80

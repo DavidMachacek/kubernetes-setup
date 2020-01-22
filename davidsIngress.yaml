@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: davidsapps
+  namespace: david
+spec:
+  rules:
+  - host: davidsapps.mycluster.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: davidsapps
+          servicePort: 80
